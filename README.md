@@ -23,5 +23,6 @@ meshtastic --port /dev/ttyUSB0 \
 ## Launch the script
 
 ```bash
+export DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...'
 uv run main.py --port /dev/ttyUSB0
 ```
