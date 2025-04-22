@@ -22,7 +22,18 @@ meshtastic --port /dev/ttyUSB0 \
 
 ## Launch the script
 
+### Commande line
+
 ```bash
 export DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...'
 uv run main.py --port /dev/ttyUSB0
+```
+
+### Docker
+
+```bash
+docker run -it --rm --name meshtastic2discord \
+           --device /dev/ttyUSB0:/dev/ttyUSB0 \
+           -e DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' \
+           meshtastic2discord --port /dev/ttyUSB0
 ```
